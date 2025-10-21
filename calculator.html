@@ -1,0 +1,545 @@
+<!--Roqaya Ayoub-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Plastic Footprint Calculator</title>
+    <style>
+        body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1A401F;
+    background-image: url('form2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white ;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2 {
+    text-align: center;
+    color:#1A401F;
+}
+label {
+    font-weight: bold;
+}
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    width: 100%;
+    background-color: #1A401F;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.title{
+    background-color: #ccc;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: white ;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-bar {
+    background-color: #fff;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    gap:4rem;
+    align-items: center;
+    padding: 1px;
+    position: relative;
+    box-shadow: 2px 2px 4px #00000066; 
+  
+  
+  }
+  .menu-bar ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .menu-bar ul li {
+    padding: 30px;
+    position: relative;
+  
+  }
+  
+  .menu-bar ul li a {
+    color: #1b401f;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s;
+   
+  }
+  
+  .menu-bar ul li a:hover{
+    background: #1b401f;  
+    color:white;
+    border-radius: 10px;
+    padding: 8px 18px;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    background-color: #fff;
+    z-index: 7;
+    box-shadow: 2px 2px 4px #00000066;
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #fff;
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+  }
+  
+  .dropdown-menu ul li:hover .dropdown-menu ul li {
+    width: 150px;
+    padding: 10px;
+    color: #000;
+  }
+  
+  .menu-bar img{
+    height: 80px;
+    margin-left: 5%;
+  }
+  *{
+    margin:0;
+    padding:0;
+    font-family:'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+.foot{
+    width: 100%;
+    height: 400px;
+    margin-top: 5%;
+    background-image:url(form2.jpg) ;
+    border-top-left-radius:125px;
+}
+footer{
+
+    
+    bottom:0;
+    
+    color:#fff;
+    
+    
+    font-size: 13px;
+    line-height: 20px;  
+}
+.row{
+    width: 10%;
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 300px;
+    height: 300px;
+    margin-left: 0;
+    margin-bottom: 30px;
+}
+.col h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position:relative
+}
+
+.foot ul li{
+    list-style: none;
+    margin-bottom: 12px;
+
+}
+.foot ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.foot form{
+    padding-bottom: 15px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+.foot  form .far{
+    font-size: 18px;
+    margin-right: 10px;
+}
+.foot form input{
+    width: 100px;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+
+}
+.foot form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+.foot form button .far{
+    font-size: 16px;
+    color: #ccc;
+}
+.social-icons .fab{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #082200;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer ;
+}
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+.copyright{
+    text-align: center;
+}
+.underline{
+    width: 100%;
+    height: 1px;
+    background: #ffffff;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+
+.col-container{
+    max-width: 85%;
+    margin-left: 7.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.col{
+    width: 30%;
+    margin-top: 10%;
+}
+#logooo{
+    margin-top:5%;
+}
+
+
+
+    </style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="menu-bar">
+        <img src="Logo.JPG" alt="">
+        <ul>
+              
+            <li><a href="indexn.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="newss.html">News</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="Page2 food donation.html">Donate</a>
+            <li><a href="#">Pages <i class="fas fa-caret-down"></i></a>
+            
+                <div class="dropdown-menu">
+                  <ul>
+                    
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <li><a href="Recipes.html">Recipes</a></li>
+                    <li><a href="diys.html">DIYs</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="green-businesses.html">Green Businesses</a></li>
+                  
+                    
+                  </ul>
+                  </div>
+            </li>
+            <li><a href="#"><i style="font-size:24px" class="fa">&#xf007;</i></button>
+                <div class="dropdown-menu">
+                  <ul>
+                    <li><a href="signup.html">Sign up</a></li>
+                    <li><a href="login.html">Log In</a></li>
+
+                    <li><a href="login.html">Log Out</a></li>
+      
+                  </ul>
+                  </div>
+              </li>
+          </ul>
+         
+        </div>
+          </li>
+          
+          </li>
+          
+      </div>
+
+    <div class="container">
+        <h1>Plastic Footprint Calculator</h1>
+        <form id="calculate" method="POST" action="calculator.php">
+            <h3>Food & Kitchen: </h3>
+            <ul>
+                <li>
+                    <label for="bottles">Number of plastic bottles used per week:</label>
+                    <input type="number" id="bottles" name="bottles" min="0" required>
+                </li>
+                <li>
+                    <label for="bags">Number of plastic bags used per week:</label>
+                    <input type="number" id="bags" name="bags" min="0" required>
+                </li>
+                <li>
+                    <label for="straws">Number of plastic straws used per week:</label>
+                    <input type="number" id="straws" name="straws" min="0" required>
+                </li>
+                <li>
+                    <label for="wrappers">Food Wrappers</label>
+                    <input type="number" id="wrappers" name="wrappers" min="0" required>
+                </li>
+            </ul>
+
+            <h3>Bathroom & Laundry</h3>
+                <ul>
+                <li>
+                    <label for="cleaning">Detergent, cleaning products bottles</label>
+                    <input type="number" id="cleaning" name="cleaning" min="0" required>
+                </li>
+                <li>
+                    <label for="cosmetics">Shampoo / shower gel / cosmetic bottles</label>
+                    <input type="number" id="cosmetics" name="cosmetics" min="0" required>
+                </li>
+                <li>
+                    <label for="others">Tooth brushes / toothpastes etc.</label>
+                    <input type="number" id="others" name="others" min="0" required>
+                </li>
+            </ul>
+
+            <h3>Disposable Containers and Packaging</h3>
+            <ul>
+                <li>
+                    <label for="box">Take-away plastic box</label>
+                    <input type="number" id="box" name="box" min="0" required>
+                </li>
+                <li>
+                    <label for="cup">Take-away plastic cup</label>
+                    <input type="number" id="cup" name="cup" min="0" required>
+                </li>
+                <li>
+                    <label for="straw">Straws</label>
+                    <input type="number" id="straw" name="straw" min="0" required>
+                </li>
+                <li>
+                    <label for="cutlery">Disposable cutlery</label>
+                    <input type="number" id="cutlery" name="cutlery" min="0" required>
+                </li>
+                <li>
+                    <label for="plates">Plastic plates</label>
+                    <input type="number" id="plates" name="plates" min="0" required>
+                </li>
+            </ul>
+
+            <h3>Other</h3>
+            <ul>
+                <li>
+                    <label for="furniture">Toys, furniture etc.</label>
+                    <input type="number" id="furniture" name="furniture" min="0" required>
+                </li>
+            </ul>
+
+            <h3>How many people are living in this household?</h3>
+            <label for="persons"></label>
+            <input type="number" id="people" name="people" min="0" required>
+        
+            <label for="submit"></label>
+            <input type="submit" value="Calculate">
+        </form>
+        <div id="result"></div>
+    </div>
+    
+    <div class="foot">
+      <footer>
+         <div class="col-container">
+         <div class="col" id="logooo">
+             <img src="S (3).png" class="logo"> 
+           </div>
+           <div class ="col">
+             <h3>office <div class="underline"></div></h3>
+                  
+             <p> Beirut, Lebanon</p>    
+               
+             <p class="email-id"> Sustainable.Scope@outlook.com</p>   
+                 
+           </div>    
+           <div class ="col">
+             <h3>Links<div class="underline"></h3>
+             <ul>
+               <li><a href="indexn.html">Home</a></li>
+               <li><a href="About.html">About Us</a></li>
+               <li><a href="Page2 food donation.html">Donate</a></li>
+               <li><a href="feedback.html">Feedback</a></li>
+             </ul>
+           </div>
+           <div class ="col">
+   
+             <h3> Newsletter<div class="underline"></div></h3>
+   
+             <form method="POST" action="email.php" >
+   
+               <i class="emailnews" style="color: #ffffff;"></i>
+   
+               <input type="emailnews" placeholder="Enter your email id " required>
+   
+               <input type="submit" value="submit">
+   
+             </form>
+   
+             <div class="social-icons">
+   
+               <i class="fa-brands fa-facebook-f"></i>
+   
+               <i class="fa-brands fa-twitter"></i>
+   
+               <i class="fa-brands fa-whatsapp"></i>
+   
+               <i class="fa-brands fa-instagram"></i>
+   
+             </div>
+   
+           </div>
+         </div>
+   
+         </div>
+   
+         <hr>
+   
+         <p class="copyright"> Sustainable Scope 2024 - All Rights Reserved</p>
+   
+       </footer>
+
+     </div>
+
+    <script>
+	$(document).ready(function() {
+            // Handle form submission with jQuery
+            $("#plastic-footprint-form").submit(function(event) {
+                // Prevent the default form submission
+                event.preventDefault();
+
+                // Serialize form data to send via AJAX
+                var formData = $(this).serialize();
+
+                // Perform AJAX POST request
+                $.ajax({
+                    type: "POST",
+                    url: "your-data-source-url",
+                    data: formData,
+                    success: function(response) {
+                        // Handle successful response
+                        $("#result").html(response);
+                    },
+                    error: function(xhr, status, error) {
+                        // Handle error
+                        console.error(xhr.responseText);
+                    }
+                });
+            });
+        });
+        document.getElementById("plastic-footprint-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let bottles = parseFloat(document.getElementById("bottles").value);
+            let bags = parseFloat(document.getElementById("bags").value);
+            let straws = parseFloat(document.getElementById("straws").value);
+            let wrappers = parseFloat(document.getElementById("wrappers").value);
+            let cleaning = parseFloat(document.getElementById("cleaning").value);
+            let cosmetics = parseFloat(document.getElementById("cosmetics").value);
+            let others = parseFloat(document.getElementById("others").value);
+            let box = parseFloat(document.getElementById("box").value);
+            let cup = parseFloat(document.getElementById("cup").value);
+            let straw = parseFloat(document.getElementById("straw").value);
+            let cutlery = parseFloat(document.getElementById("cutlery").value);
+            let plates = parseFloat(document.getElementById("plates").value);
+            let furniture = parseFloat(document.getElementById("furniture").value);
+            let people = parseFloat(document.getElementById("people").value);
+
+            let totalPlastic = bottles + bags + wrappers + straws + cleaning + cosmetics + others + box + cup 
+            + straw + cutlery + plates + furniture;
+
+            let plasticBreakdown = {
+                "Bottles": bottles,
+                "Bags": bags,
+                "Straws": straws,
+                "wrappers": wrappers,
+                "cleaning": cleaning,
+                "cosmetics": cosmetics,
+                "others": others,
+                "box": box,
+                "cup": cup,
+                "straw": straw,
+                "cutlery": cutlery,
+                "plates": plates,
+                "furniture": furniture,
+            };
+
+            let result = document.getElementById("result");
+            result.innerHTML = "<h2>Your plastic footprint:</h2><p>Total plastic used per week: " + totalPlastic/people + " units</p>";
+
+            let breakdownHTML = "<h3>Plastic usage breakdown:</h3><ul>";
+            for (const [item, count] of Object.entries(plasticBreakdown)) {
+                breakdownHTML += "<li>" + item + ": " + count + " units</li>";
+            }
+            breakdownHTML += "</ul>";
+            result.innerHTML += breakdownHTML;
+        });
+    </script>
+</body>
+</html>

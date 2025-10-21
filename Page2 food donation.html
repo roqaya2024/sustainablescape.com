@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en"><!--dana-->
+<head>
+  <!-- Meta tags for character set and viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Title of the webpage -->
+  <title>Food Donation</title>
+  <!-- Internal CSS styling -->
+  <style>
+    /* Styling for the body */
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+        background-image: url(form2.jpg); /* Background image */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        
+    }
+    /* Styling for the container */
+    .container {
+        width: 80%;
+        max-width: 800px;
+        margin: 10px auto;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 15px;
+    }
+    /* Styling for headings */
+    h1 {
+        color: #006912;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    /* Styling for labels */
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #006912; /* Label color */
+        font-size: 20px;
+    }
+    /* Styling for radio group */
+    .radio-group {
+        margin-bottom: 22px;
+    }
+    /* Styling for textareas */
+    textarea {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+        border: 1px solid #ffffff;
+        padding: 10px;
+        resize: vertical;
+    }
+    /* Styling for paragraphs */
+    p {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    /* Styling for inputs and selects */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      width: 100%;  /* Makes the input fields take full width of the container */
+      padding: 20px;  /* More padding inside the fields */
+      height: 50px;  /* Sets a specific height for better visibility */
+      border: none;
+      border-radius: 25px;
+      margin-bottom: 20px;  /* Keeps ample space between fields */
+      box-sizing: border-box;
+      background-color: #f2f2f2;
+      font-size: 18px;  /* Larger font size for better readability */
+      color: #333;
+      border: 2px solid #ccc;  /* Thicker border to match the increased field size */
+      transition: border-color 0.3s ease;
+}
+    /* Styling for input focus */
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    select:focus {
+        border-color: #4CAF50;
+    }
+    /* Styling for input groups */
+    .input-group {
+        display: flex;
+        margin-bottom: 20px;
+    }
+    /* Styling for input group inputs */
+    .input-group input {
+        flex: 1;
+        margin-right: 10px;
+    }
+    /* Styling for last child of input group */
+    .input-group input:last-child {
+        margin-right: 0;
+    }
+    /* Styling for submit button */
+    input[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #1b401f;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+    * {box-sizing: border-box;}
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 10px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+textarea {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  resize: vertical;
+}
+/* Styling for paragraphs */
+p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+  text-align: center;
+}
+/* Styling for inputs and selects */
+input[type="text"],
+select {
+  width: 200px; 
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  font-size: 16px;
+  color: #333;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 15px;
+  margin-right: 16px;
+  background: #1b401f;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #3fa549;
+}
+
+   /* Style to make the link look like a button */
+.button-style {
+       display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #1b401f;
+        color: white;
+        margin-bottom: 20px;  
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.button-style:hover {
+    background-color: #45a049;
+}
+    
+  </style>
+</head>
+<body>
+  <div class="menu-bar">
+    <img src="Logo.JPG" alt="">
+    <ul>
+              
+      <li><a href="indexn.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="newss.html">News</a></li>
+  
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="Page2 food donation.html">Donate</a>
+      <li><a href="#">Pages <i class="fas fa-caret-down"></i></a>
+      
+          <div class="dropdown-menu">
+            <ul>
+              
+              <li><a href="calculator.html">Calculator</a></li>
+              <li><a href="Recipes.html">Recipes</a></li>
+              <li><a href="diys.html">DIYs</a></li>
+              <li><a href="feedback.html">Feedback</a></li>
+              <li><a href="green-businesses.html">Green Businesses</a></li>
+            
+              
+            </ul>
+            </div>
+      </li>
+      <li><a href="#"><i style="font-size:24px" class="fa">&#xf007;</i></button>
+        <div class="dropdown-menu">
+          <ul>
+            <li><a href="signup.html">Sign up</a></li>
+            <li><a href="login.html">Log In</a></li>
+
+            <li><a href="login.html">Log Out</a></li>
+
+          </ul>
+          </div>
+      </li>
+    </ul>
+    
+      
+  </div>
+ 
+  <!-- Container for the form -->
+  <div class="container">
+    <!-- Heading -->
+    <h1>Join Us in Our Food Donation Efforts</h1>
+    <!-- Paragraph explaining the form -->
+    <p>Fill out the form below to contribute!</p>
+    <!-- Form -->
+    <form id="donation-form" method="POST" action="donate.php">
+      <!-- Input fields for first name, last name, street, city, province/state, phone number, email -->
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="fname" placeholder="e.g. John" required style="width: 100%; padding: 20px; height: 50px; font-size: 18px;">
+
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lname" placeholder="e.g. Doe" required style="width: 100%; padding: 20px; height: 50px; font-size: 18px;">
+
+      <label for="street">Street</label>
+      <input type="text" id="street" name="street" placeholder="e.g. 123 Main St" required style="width: 100%; padding: 20px; height: 50px; font-size: 18px;">
+
+      <label for="city">City</label>
+      <input type="text" id="city" name="city" placeholder="e.g. New York" required style="width: 100%; padding: 20px; height: 50px; font-size: 18px;">
+
+      <label for="state">Province/State</label>
+      <input type="text" id="state" name="state" placeholder="e.g. California" required style="width: 100%; padding: 20px; height: 50px; font-size: 18px;">
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="e.g. 123-456-7890" required style="width: 100%; padding: 20px; height: 50px; font-size: 18px;">
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="e.g. example@example.com" required style="width: 100%; padding: 20px; height: 50px; font-size: 18px;">
+      
+     
+      <!-- Dropdown for donation type -->
+      <label for="donation">Donation Type</label>
+      <select id="donation" name="donation" required onchange="updateAction()" style="width: 100%; font-size: 18px;">
+        <option value="" disabled selected>Select Donation Type</option>
+        <option value="plastic">Plastic</option>
+        <option value="food">Food</option>
+      </select>
+      
+      <label type="submit" for="payment">Other Donation Option</label>
+    </form>
+      <a href="payment.html" class="button-style">Other donation options</a>
+      <!-- Submit button -->
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <!-- JavaScript for updating form action based on donation type -->
+  <script>
+    function updateAction() {
+      var form = document.getElementById("donation");
+      var donationType = document.getElementById("donation").value;
+      if (donationType === "plastic") {
+        form.action = "plasticmap.html";
+      } else if (donationType === "food") {
+        form.action = "Map.html";
+      }
+    }
+  </script>
+
+</body>
+</html>

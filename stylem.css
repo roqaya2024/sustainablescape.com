@@ -1,0 +1,283 @@
+
+
+/* Styling Images */
+body{
+  margin:0;
+  margin-bottom: 25rem;
+
+}
+.container {
+  display: flex;
+ 
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 7.5%;
+  width: 100%;
+}
+
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: calc(25% - 0px); 
+  width: 308px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 400px;
+}
+
+
+.img-wrapper > img{ 
+  display: block;
+  width: 35%;
+  margin-left:4%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 90%;
+}
+
+.content.fade{
+margin-left: 0;
+padding: 5%;
+}
+
+.img-wrapper > .content{
+  position: absolute;
+  inset: 0;
+  
+  padding: 1rem;
+  color: #ffffff;
+  
+  justify-content: center;
+  align-items: center;
+}
+
+.img-wrapper > img,
+.img-wrapper > .content{
+  transition: 200ms ease-in-out;
+}
+
+.img-wrapper:hover > img.blur{
+  filter: blur(100px);
+}
+
+.img-wrapper:hover > img.zoom{
+  transform: scale(1.1);
+}
+
+.img-wrapper > .content.fade{
+  opacity: 0;
+}
+
+.img-wrapper:hover > .content.fade{
+  opacity: 1;
+}
+
+#img1{
+background-image: url('image\ 1.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+}
+#img2{
+background-image: url('image\ 2.jpg');
+}
+#img3{
+background-image: url('image\ 3.jpg');
+}
+#img4{
+background-image: url('image\ 4.jpg');
+}
+#img5{
+background-image: url('image\ 5.jpg');
+}
+#img6{
+background-image: url('image\ 6.jpg');
+}
+#img7{
+background-image: url('image\ 7.jpg');
+}
+#img8{
+background-image: url('image\ 8.jpg');
+}
+#img9{
+background-image: url('image\ 9.jpg');
+}
+#img10{
+background-image: url('image\ 10.jpg');
+}
+#img11{
+background-image: url('image\ 11.jpg');
+}
+#img12{
+background-image: url('image\ 12.jpg');
+}
+#img13{
+background-image: url('image\ 13.jpg');
+}
+#img14{
+background-image: url('image\ 14.jpg');
+}
+#img15{
+background-image: url('image\ 15.jpg');
+}
+#img16{
+background-image: url('image\ 16.jpg');
+}
+#img17{
+background-image: url('image 17.jpg');
+}
+
+#img1:hover{
+background: #eb1628;
+transition: all 0.3s ease-in;
+}
+#img2:hover{
+background: #dda83a;
+transition: all 0.3s ease-in;
+}
+#img3:hover{
+background: #299a44;
+transition: all 0.3s ease-in;
+}
+#img4:hover{
+background: #c21b30;
+transition: all 0.3s ease-in;
+}
+#img5:hover{
+background: #ee3e25;
+transition: all 0.3s ease-in;
+}
+#img6:hover{
+background: #00afd8;
+transition: all 0.3s ease-in;
+}
+#img7:hover{
+background: #fcb90c;
+transition: all 0.3s ease-in;
+}
+#img8:hover{
+background: #901135;
+transition: all 0.3s ease-in;
+}
+#img9:hover{
+background: #f26f1f;
+transition: all 0.3s ease-in;
+}
+#img10:hover{
+background: #e11585;
+transition: all 0.3s ease-in;
+}
+#img11:hover{
+background: #f89e21;
+transition: all 0.3s ease-in;
+}
+#img12:hover{
+background: #cf8d25;
+transition: all 0.3s ease-in;
+}
+#img13:hover{
+background: #467839;
+transition: all 0.3s ease-in;
+}
+#img14:hover{
+background: #007ebc;
+transition: all 0.3s ease-in;
+}
+#img15:hover{
+background: #3faf46;
+transition: all 0.3s ease-in;
+}
+#img16:hover{
+background: #00548b;
+transition: all 0.3s ease-in;
+}
+#img17:hover{
+background: #00558a;
+transition: all 0.3s ease-in;
+}
+
+.achievments{
+  display: flex;
+  flex-wrap: wrap;
+}
+.achieved{
+  width: 45%; 
+  box-sizing: border-box; 
+  padding-left: 0;
+  text-align: left; 
+  padding-left: 10%;
+}
+.content h1{
+  opacity: 0.3;
+}
+.achieved h1{
+  opacity: 1; /*in order to not affect all other h1 tags inside div content*/
+  padding: 0;
+  margin: 0;
+}
+.achieved p{
+ 
+  padding: 0;
+  margin: 0;
+}
+.child{
+  padding-top: 10%;
+}
+
+.underNav{
+  margin-left: 20%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  
+}
+.navContained{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 15%;
+}
+.nour{
+  padding-left: 20%;
+}
+.nour p{
+  padding-top: 0;
+  margin-top: 0;
+  
+}
+
+.nour h2{
+  font-weight: bold;
+  
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.text{
+  font-family: 'Times New Roman', Times, serif;
+  margin-left:20%;
+  margin-right: 20%;
+  color: #000;
+}
+
+.text h1{
+  font-size: 30px;
+    font-weight: bold;
+    line-height: 40px;
+    color: #000000
+}
+
+.text p{
+  font-size: 22px;
+    line-height: 40px;
+    color: #000;
+}
+
+.paragraphs{
+  margin-top: 5%;
+}
+

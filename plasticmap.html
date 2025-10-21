@@ -1,0 +1,98 @@
+<!DOCTYPE html><!--dana-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Donation</title>
+  <style>
+        body {
+          font-family: 'Times New Roman', Times, serif; /* Sets the font family for the body text */
+          margin: 0;
+          padding: 0;
+          background-image: url(form2.jpg); /* Sets the background image for the body */
+          background-size: cover; /* Sets the background image to cover the entire view */
+          background-position: center; /* Centers the background image */
+          background-repeat: no-repeat; /* Prevents the background image from repeating */
+          background-attachment: fixed; /* Fixes the background image in place */
+          
+      }
+
+      .container {
+          width: 80%; 
+          max-width: 800px; 
+          margin: 10px auto; /* Centers the container horizontally */
+          padding: 30px; /* Adds padding inside the container */
+          background-color: #ffffff; /* Sets the background color of the container */
+          border-radius: 15px; /* the edges of the border become rounded */ 
+
+          text-align: center;
+      }
+
+      h1 {
+          color: #006912;
+          font-size: 36px;
+          margin-bottom: 20px;
+          letter-spacing: 1px;
+          text-align: center;
+      }
+
+      label {
+          display: block; /* Displays labels as block elements */
+          margin-bottom: 10px; /* Adds space below each label */
+          font-weight: bold; /* Sets the font weight of labels to bold */
+      }
+    p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+    #map-container {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      margin-bottom: 30px;
+    }
+    #map-img {
+      width: 100%;
+      height: auto;
+    }
+    .pin {
+      position: absolute;
+      cursor: pointer;
+      animation: bounce 1s infinite alternate;
+      transition: transform 0.3s ease;
+      width: 50px; /* Adjust width of pin image */
+      height: auto; /* Maintain aspect ratio */
+    }
+    .pin:hover {
+      transform: scale(1.1);
+    }
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Donation Locations</h1>
+    <p>Click on the pin and choose the nearest location!</p>
+    <form id="donation-form" action="submit.php" method="POST">
+    
+        <img id="map-img" src="mp.PNG" alt="Map with donation locations">
+        <!-- Pins -->
+        <a href="https://www.google.com/maps?q=RecyclingPlastic+Location+1" target="_blank"><img class="pin" src="google-pin-icon-19.jpg" alt="Location" style="left: 40%; top: 70%;"></a>
+        <a href="https://www.google.com/maps?q=RecyclingPlastic+Location+2" target="_blank"><img class="pin" src="google-pin-icon-19.jpg" alt="Location" style="left: 40%; top: 60%;"></a>
+        <a href="https://www.google.com/maps?q=RecyclingPlastic+Location+3" target="_blank"><img class="pin" src="google-pin-icon-19.jpg" alt="Location " style="left: 60%; top: 70%;"></a>
+        <a href="https://www.google.com/maps?q=RecyclingPlastic+Location+4" target="_blank"><img class="pin" src="google-pin-icon-19.jpg" alt=" Location " style="left: 50%; top: 50%;"></a>
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>

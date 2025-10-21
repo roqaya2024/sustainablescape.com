@@ -1,0 +1,196 @@
+<!DOCTYPE html> <!--nour sleem-->
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8"> 
+    <title> Sustainability Scape | Feedback on Sustainability and Service</title> 
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="stylefooter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif; /* Sets the font family for the body text */
+            margin: 0;
+            padding: 0;
+            background-image: url(form2.jpg); /* Sets the background image for the body */
+            background-size: cover; /* Sets the background image to cover the entire view */
+            background-position: center; /* Centers the background image */
+            background-repeat: no-repeat; /* Prevents the background image from repeating */
+            background-attachment: fixed; /* Fixes the background image in place */
+        }
+        .container {
+            width: 80%; 
+            max-width: 800px; 
+            margin: 20px auto; /* Centers the container horizontally */
+            padding: 30px; /* Adds padding inside the container */
+            background-color: #fff; /* Sets the background color of the container */
+            border-radius: 15px; /* the edges of the border become rounded */ 
+            box-shadow: 2px 2px 4px #00000099; /* Add shadow effect */
+            
+        }
+
+        h1 {
+            color: #1b401f; /* Sets the color of the heading text */
+            text-align: center; /* Centers the heading text */
+            margin-bottom: 30px; /* Adds space below the heading */
+        }
+
+        label {
+            display: block; /* Displays labels as block elements */
+            margin-bottom: 10px; /* Adds space below each label */
+            font-weight: bold; /* Sets the font weight of labels to bold */
+        }
+
+        .radio-group {
+            margin-bottom: 22px; /* Adds space between each question and their buttons */
+        }
+
+        input[type="radio"] {
+            margin-right: 10px; /* Adds space between buttons themselves */
+        }
+
+        textarea { /* where the user writes their comments */
+            width: 100%;
+            height: 100px; 
+            margin-bottom: 20px; /* Adds space below the textarea */
+            border-radius: 4px; /* Adds rounded corners to the textarea */
+            border: 1px solid #ffffff; /* Sets the border color of the textarea */
+            padding: 10px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%; 
+            padding: 10px; 
+            background-color: #1b401f; /* Sets the background color of the button */
+            color: white; /* Sets the text color of the button */
+            border: none; /* Removes the border of the button */
+            border-radius: 4px; /* Adds rounded corners to the button */
+            cursor: pointer; /* Changes the cursor to a pointer on hover */
+            font-size: 16px; /* Sets the font size of the button */
+            text-align: center; /* Centers the text inside the button */
+            text-decoration: none; /* Removes underline from the button text */
+            transition: background-color 0.3s ease; /* transition effect to button background color */
+        }
+        .btn:hover {
+            background-color:#1b401f; /* Changes the background color of the button when hover */
+        }
+
+    </style> 
+</head>
+
+<body> 
+  <div class="menu-bar">
+    <img src="Logo.JPG" alt="">
+    <ul>
+              
+        <li><a href="indexn.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="newss.html">News</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="Page2 food donation.html">Donate</a>
+        <li><a href="#">Pages <i class="fas fa-caret-down"></i></a>
+        
+            <div class="dropdown-menu">
+              <ul>
+                
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="Recipes.html">Recipes</a></li>
+                <li><a href="diys.html">DIYs</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="green-businesses.html">Green Businesses</a></li>
+              
+                
+              </ul>
+              </div>
+        </li>
+        <li><a href="#"><i style="font-size:24px" class="fa">&#xf007;</i></button>
+            <div class="dropdown-menu">
+              <ul>
+                <li><a href="signup.html">Sign up</a></li>
+                <li><a href="login.html">Log In</a></li>
+
+                <li><a href="login.html">Log Out</a></li>
+  
+              </ul>
+              </div>
+          </li>
+      </ul>
+     
+  </div>
+
+    <div class="container"> 
+        <h1>Feedback on Sustainability and Service</h1> 
+        <form id="feedback"  method="POST" action="feedback.php"> 
+            <label>How do you rate the sustainability of food options available to you?</label>
+            <div class="radio-group"> 
+                <input type="radio" name="foodSustainability" value="excellent"> Excellent 
+                <input type="radio" name="foodSustainability" value="good"> Good
+                <input type="radio" name="foodSustainability" value="average"> Average
+                <input type="radio" name="foodSustainability" value="poor"> Poor
+                <input type="radio" name="foodSustainability" value="very poor"> Very Poor
+            </div>
+
+            <label>How do you rate the sustainability of plastic usage in your daily life?</label>
+            <div class="radio-group">
+                <input type="radio" name="plasticSustainability" value="excellent"> Excellent
+                <input type="radio" name="plasticSustainability" value="good"> Good
+                <input type="radio" name="plasticSustainability" value="average"> Average
+                <input type="radio" name="plasticSustainability" value="poor"> Poor
+                <input type="radio" name="plasticSustainability" value="very poor"> Very Poor
+            </div>
+
+            <label>How satisfied are you with the information provided on sustainability?</label>
+            <div class="radio-group">
+                <input type="radio" name="sustainabilityInfo" value="very satisfied"> Very Satisfied
+                <input type="radio" name="sustainabilityInfo" value="satisfied"> Satisfied
+                <input type="radio" name="sustainabilityInfo" value="neutral"> Neutral
+                <input type="radio" name="sustainabilityInfo" value="unsatisfied"> Unsatisfied
+                <input type="radio" name="sustainabilityInfo" value="very unsatisfied"> Very Unsatisfied
+            </div>
+
+            <label>How likely are you to recommend our sustainable practices to others?</label>
+            <div class="radio-group">
+                <input type="radio" name="recommendationLikelihood" value="very likely"> Very Likely
+                <input type="radio" name="recommendationLikelihood" value="likely"> Likely
+                <input type="radio" name="recommendationLikelihood" value="neutral"> Neutral
+                <input type="radio" name="recommendationLikelihood" value="unlikely"> Unlikely
+                <input type="radio" name="recommendationLikelihood" value="very unlikely"> Very Unlikely
+            </div>
+
+            <label>How would you rate the overall service provided by us?</label>
+            <div class="radio-group">
+                <input type="radio" name="serviceQuality" value="excellent"> Excellent
+                <input type="radio" name="serviceQuality" value="good"> Good
+                <input type="radio" name="serviceQuality" value="average"> Average
+                <input type="radio" name="serviceQuality" value="poor"> Poor
+                <input type="radio" name="serviceQuality" value="very poor"> Very Poor
+            </div>
+
+            <label for="additionalComments">Any additional comments or suggestions:</label> 
+            <textarea id="additionalComments" name="additionalComments" placeholder="Type your comments here..."></textarea> 
+
+            <button type="submit" class="btn">Submit Feedback</button>
+        </form> 
+    </div> 
+
+    <script> // used some youtube videos to write this code 
+        document.getElementById("feedbackForm").addEventListener("submit", function(event) { // Adds an event listener for form submission 
+            event.preventDefault(); // Prevents the default form submission behavior 
+            var formData = new FormData(this); // Creates a FormData object to collect form data 
+            var feedback = {}; // Initializes an empty object to store feedback data 
+            formData.forEach(function(value, key) { // Iterates over form data and stores it in the feedback object
+                feedback[key] = value;
+            });
+            console.log(feedback); // Logs the feedback object to the console 
+            alert("Thank you for your feedback <;"); // Shows a thank you message to the user 
+        });
+    </script>
+
+
+    
+</body> 
+
+</html> 

@@ -1,0 +1,764 @@
+
+
+<!--Roqaya Ayoub-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Green businesses</title>
+    <style>
+        /*header*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .menu-bar {
+            background-color: #fff;
+            height: 80px;
+            width: 100%;
+            display: flex;
+            gap:4rem;
+            align-items: center;
+            padding: 1px;
+            position: relative;
+            box-shadow: 2px 2px 4px #00000066; 
+        }
+        .menu-bar ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        .menu-bar ul li {
+            padding: 30px;
+            position: relative;
+        }
+        .menu-bar ul li a {
+            color: #1b401f;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .menu-bar ul li a:hover{
+            background: #1b401f;  
+            color:white;
+            border-radius: 10px;
+            padding: 8px 18px;
+        }
+        .menu-bar ul li a.active{
+            background: #1b401f;
+            color: #fff;
+        }
+        .check{
+            display: none;
+            height: fit-content;
+            cursor: pointer;
+            padding: 3px 8px;
+            border-radius: 5px;
+            transition: 0.2s;
+        }
+        .check:hover{
+            background: #85cefc;
+        }
+        
+        .dropdown-menu {
+            display: none;
+            background-color: #fff;
+            z-index: 7;
+            box-shadow: 2px 2px 4px #00000066;
+        }
+        
+        .menu-bar ul li:hover .dropdown-menu {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: #fff;
+        }
+        
+        .menu-bar ul li:hover .dropdown-menu ul {
+            display: block;
+            margin: 10px;
+        }
+        
+        .dropdown-menu ul li:hover .dropdown-menu ul li {
+            width: 150px;
+            padding: 10px;
+            color: #000;
+        }
+        
+        .menu-bar img{
+            height: 80px;
+            margin-left: 5%;
+        }
+        /*content*/
+        *{
+        font-family: 'Times new Roman', sans-serif;
+        margin:0; padding:0;
+        box-sizing: border-box;
+        outline: none; border:none;
+        text-decoration: none;
+        transition: all .2s linear;
+        text-transform: capitalize;
+        }
+
+        html{
+        font-size: 62.5%;
+        overflow-x: hidden;
+        }
+
+        body{
+        background: #eee;
+        background-image: url("form2.jpg");
+        background-size: cover;
+        }
+
+        .container{
+        max-width: 1200px;
+        margin:0 auto;
+        padding:3rem 2rem;
+        }
+
+        .container .title{
+        font-size: 3.5rem;
+        color:#1b401f;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+        text-align: center;
+        }
+
+        .container .products-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap:2rem;
+        }
+
+        .container .products-container .product{
+        text-align: center;
+        padding:3rem 2rem;
+        background: #fff;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        outline: .1rem solid #ccc;
+        outline-offset: -1.5rem;
+        cursor: pointer;
+        }
+
+        .container .products-container .product:hover{
+        outline: .2rem solid #222;
+        outline-offset: 0;
+        }
+
+        .container .products-container .product img{
+        height: 175px;
+        width:250px;
+        }
+
+        .container .products-container .product:hover img{
+        transform: scale(.9);
+        }
+
+        .container .products-container .product h3{
+        padding:.5rem 0;
+        font-size: 2rem;
+        color:#1b401f;
+        }
+
+        .container .products-container .product:hover h3{
+            color:#4b9352;
+        }
+
+        .products-preview{
+        position: fixed;
+        top:0; left:0;
+        min-height: 100vh;
+        width: 100%;
+        background: rgba(0,0,0,.8);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        }
+
+        .products-preview .preview{
+        display: none;
+        padding:2rem;
+        text-align: center;
+        background: #fff;
+        border-radius: 10px;
+        position: relative;
+        margin:2rem;
+        width: 40rem;
+        }
+
+        .products-preview .preview.active{
+        display: inline-block;
+        }
+
+        .products-preview .preview .fa-times{
+        position: absolute;
+        top:1rem; right:1.5rem;
+        cursor: pointer;
+        color:#444;
+        font-size: 4rem;
+        }
+
+        .products-preview .preview .fa-times:hover{
+        transform: rotate(90deg);
+        }
+
+        .products-preview .preview h3{
+        color:#1b401f;
+        padding:.5rem 0;
+        font-size: 2.5rem;
+        }
+
+        .products-preview .preview .stars{
+        padding:1rem 0;
+        font-size: 1.7rem;
+        }
+
+        .products-preview .preview .stars i{
+        color:#27ae60;
+        }
+
+        .products-preview .preview p{
+        line-height: 1.5;
+        padding:1rem 0;
+        font-size: 1.6rem;
+        color:#777;
+        }
+
+        .products-preview .preview .buttons{
+        display: flex;
+        gap:1.5rem;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+        }
+
+        .products-preview .preview .buttons a{
+        flex:1 1 16rem;
+        padding:1rem;
+        font-size: 1.8rem;
+        color:#444;
+        border:.1rem solid #444;
+        border-radius: 10px;
+        }
+
+        .products-preview .preview .buttons a:hover{
+        background: #1b401f;
+        color:white;
+        border-color: #1b401f;
+        }
+        @media (max-width:991px){
+            html{
+                font-size: 55%;
+            }
+        }
+
+        @media (max-width:450px){
+            html{
+                font-size: 50%;
+            }
+        }
+        /*footer*/
+        .foot{
+            width: 100%;
+            height: 400px;
+            margin-top: 5%;
+            background-image:url(form2.jpg) ;
+            border-top-left-radius:125px;
+        }
+        footer{
+
+            
+            bottom:0;
+            
+            color:#fff;
+            
+            
+            font-size: 13px;
+            line-height: 20px;  
+        }
+        .row{
+            width: 10%;
+            margin-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .logo{
+            width: 300px;
+            height: 300px;
+            margin-left: 0;
+            margin-bottom: 30px;
+        }
+        .col h3{
+            width: fit-content;
+            margin-bottom: 40px;
+            position:relative
+        }
+
+        .foot ul li{
+            list-style: none;
+            margin-bottom: 12px;
+
+        }
+        .foot ul li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .foot form{
+            padding-bottom: 15px;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 50px;
+        }
+        .foot  form .far{
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        .foot form input{
+            width: 100px;
+            background: transparent;
+            color: #ccc;
+            border: 0;
+            outline: none;
+
+        }
+        .foot form button{
+            background: transparent;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+        }
+        .foot form button .far{
+            font-size: 16px;
+            color: #ccc;
+        }
+        .social-icons .fab{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-size: 20px;
+            color: #082200;
+            background: #fff;
+            margin-right: 15px;
+            cursor: pointer ;
+        }
+        hr{
+            width: 90%;
+            border: 0;
+            border-bottom: 1px solid #ccc;
+            margin: 20px auto;
+        }
+        .copyright{
+            text-align: center;
+        }
+        .underline{
+            width: 100%;
+            height: 1px;
+            background: #ffffff;
+            border-radius: 3px;
+            position: absolute;
+            top: 25px;
+            left: 0;
+        }
+
+        .col-container{
+            max-width: 85%;
+            margin-left: 7.5%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .col{
+            width: 30%;
+            margin-top: 10%;
+        }
+        #logooo{
+            margin-top:5%;
+        }
+        
+    </style>
+</head>
+<body>
+    <!--Header-->
+    <div class="menu-bar">
+        <img src="Logo.JPG" alt="">
+        <ul>
+              
+            <li><a href="indexn.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="newss.html">News</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="Page2 food donation.html">Donate</a>
+            <li><a href="#">Pages <i class="fas fa-caret-down"></i></a>
+            
+                <div class="dropdown-menu">
+                  <ul>
+                    
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <li><a href="Recipes.html">Recipes</a></li>
+                    <li><a href="diys.html">DIYs</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="green-businesses.html">Green Businesses</a></li>
+                  
+                    
+                  </ul>
+                  </div>
+            </li>
+            <li><a href="#"><i style="font-size:24px" class="fa">&#xf007;</i></button>
+                <div class="dropdown-menu">
+                  <ul>
+                    <li><a href="signup.html">Sign up</a></li>
+                    <li><a href="login.html">Log In</a></li>
+
+                    <li><a href="login.html">Log Out</a></li>
+      
+                  </ul>
+                  </div>
+              </li>
+          </ul>
+          
+          
+      </div>
+    <div class="container">
+
+        <h3 class="title">Green Businesses in Lebanon</h3>
+    
+        <div class="products-container">
+    
+        <div class="product" data-name="p-1">
+            <img src="images1.PNG">
+            <h3>Souk el Tayeb</h3>
+        </div>
+    
+        <div class="product" data-name="p-2">
+            <img src="images2.jpg" alt="">
+            <h3>Tawlet</h3>
+        </div>
+    
+        <div class="product" data-name="p-3">
+            <img src="images3.jpg">
+            <h3>Green Car Service</h3>
+        </div>
+    
+        <div class="product" data-name="p-4">
+            <img src="images4.jpg">
+            <h3>Dar Linda</h3>
+        </div>
+    
+        <div class="product" data-name="p-5">
+            <img src="images5.jpg" alt="">
+            <h3>Lebanese Mountain Trail Association</h3>
+        </div>
+    
+        <div class="product" data-name="p-6">
+            <img src="images6.jpg" alt="">
+            <h3>Bioland</h3>
+        </div>
+
+        <div class="product" data-name="p-7">
+            <img src="images7.jpg" alt="">
+            <h3>Recycle Beirut</h3>
+        </div>
+
+        <div class="product" data-name="p-8">
+            <img src="images8.jpg" alt="">
+            <h3>Chateau Ksara</h3>
+        </div>
+
+        <div class="product" data-name="p-9">
+            <img src="images9.jpeg" alt="">
+            <h3>Kamkan</h3>
+        </div>
+
+        <div class="product" data-name="p-10">
+            <img src="images10.png" alt="">
+            <h3>Bkerzay</h3>
+        </div>
+    
+        </div>
+    
+    </div>
+    
+    <div class="products-preview">
+    
+        <div class="preview" data-target="p-1">
+        <i class="fas fa-times"></i>
+        <h3>Souk El Tayeb</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p>This is a farmer's market in Beirut that focuses on promoting local, organic, and sustainable food products. It supports small-scale farmers and producers who use environmentally friendly practices.</p>
+        <div class="buttons">
+            <a href="green-businesses.html" class="buy">Back to the page</a>
+        </div>
+        </div>
+    
+        <div class="preview" data-target="p-2">
+        <i class="fas fa-times"></i>
+        <h3>Tawlet</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p>Tawlet is a restaurant in Beirut that serves traditional Lebanese cuisine made from locally sourced and organic ingredients. It also hosts a rotating roster of guest chefs who highlight different regional cuisines.</p>
+        <div class="buttons">
+            <a href="green-businesses.html" class="buy">Back to the page</a>
+        </div>
+        </div>
+    
+        <div class="preview" data-target="p-3">
+        <i class="fas fa-times"></i>
+        <h3>Green Car services</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p>This is a car rental service in Lebanon that offers electric and hybrid vehicles for rent, promoting eco-friendly transportation options.</p>
+        <div class="buttons"> 
+                <a href="green-businesses.html" class="buy">Back to the page</a>
+        </div>
+        </div>
+    
+        <div class="preview" data-target="p-4">
+        <i class="fas fa-times"></i>
+        <h3>Dar Linda</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p>Dar Linda is an eco-friendly guesthouse located in the Chouf region of Lebanon. It features sustainable architecture, renewable energy systems, and organic gardens.</p>
+        <div class="buttons">
+                <a href="green-businesses.html" class="buy">Back to the page</a>
+        </div>
+        </div>
+    
+        <div class="preview" data-target="p-5">
+        <i class="fas fa-times"></i>
+        <h3>Lebanese Mountain Trail Association</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p>This organization promotes eco-tourism and sustainable hiking in Lebanon through the Lebanese Mountain Trail, a long-distance hiking trail that spans the length of the country.</p>
+        <div class="buttons">
+                <a href="green-businesses.html" class="buy">Back to the page</a>
+        </div>
+        </div>
+    
+        <div class="preview" data-target="p-6">
+        <i class="fas fa-times"></i>
+        <h3>Bioland</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p>Bioland is an organic farm in Lebanon that produces a variety of organic fruits, vegetables, dairy products, and grains. They also operate a farm-to-table restaurant and offer educational tours and workshops.</p>
+        <div class="buttons">
+                <a href="green-businesses.html" class="buy">Back to the page</a>
+        </div>
+        </div>
+
+        <div class="preview" data-target="p-7">
+            <i class="fas fa-times"></i>
+            <h3>Recycle Beirut</h3>
+            <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>Recycle Beirut is a social enterprise that provides recycling services in Beirut, collecting and processing recyclable materials to reduce waste and promote recycling in the city.</p>
+            <div class="buttons">
+                <a href="green-businesses.html" class="buy">Back to the page</a>
+            </div>
+        </div>
+
+        <div class="preview" data-target="p-8">
+            <i class="fas fa-times"></i>
+            <h3>Chateau Ksara</h3>
+            <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>Chateau Ksara is a winery in Lebanon that is committed to sustainable viticulture practices, including organic farming methods, water conservation, and biodiversity preservation.</p>
+            <div class="buttons">
+                <a href="green-businesses.html" class="buy">Back to the page</a>
+            </div>
+        </div>
+
+        <div class="preview" data-target="p-9">
+            <i class="fas fa-times"></i>
+            <h3>Kamkan</h3>
+            <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>Kamakan is a zero-waste store in Beirut that offers package-free and bulk items, as well as environmentally friendly alternatives to single-use products.</p>
+            <div class="buttons">
+                <a href="green-businesses.html" class="buy">Back to the page</a>
+            </div>
+        </div>
+
+        <div class="preview" data-target="p-10">
+            <i class="fas fa-times"></i>
+            <h3>Bkerzay</h3>
+            <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>Bkerzay is an eco-lodge and nature reserve in the Chouf region of Lebanon. It offers sustainable accommodations, organic farming, and outdoor activities such as hiking and birdwatching.</p>
+            <div class="buttons">
+                <a href="green-businesses.html" class="buy">Back to the page</a>
+            </div>
+        </div>
+    
+    </div>
+    
+    
+    <div class="foot">
+        <footer>
+           <div class="col-container">
+           <div class="col" id="logooo">
+               <img src="S (3).png" class="logo"> 
+             </div>
+             <div class ="col">
+               <h3>office <div class="underline"></div></h3>
+                    
+               <p> Beirut, Lebanon</p>    
+                 
+               <p class="email-id"> Sustainable.Scope@outlook.com</p>   
+                   
+             </div>    
+             <div class ="col">
+               <h3>Links<div class="underline"></h3>
+               <ul>
+                 <li><a href="indexn.html">Home</a></li>
+                 <li><a href="About.html">About Us</a></li>
+                 <li><a href="Page2 food donation.html">Donate</a></li>
+                 <li><a href="feedback.html">Feedback</a></li>
+               </ul>
+             </div>
+             <div class ="col">
+     
+               <h3> Newsletter<div class="underline"></div></h3>
+     
+               <form method="POST" action="email.php" >
+     
+                 <i class="emailnews" style="color: #ffffff;"></i>
+     
+                 <input type="emailnews" placeholder="Enter your email id " required>
+     
+                 <input type="submit" value="submit">
+     
+               </form>
+     
+               <div class="social-icons">
+     
+                 <i class="fa-brands fa-facebook-f"></i>
+     
+                 <i class="fa-brands fa-twitter"></i>
+     
+                 <i class="fa-brands fa-whatsapp"></i>
+     
+                 <i class="fa-brands fa-instagram"></i>
+     
+               </div>
+     
+             </div>
+           </div>
+     
+           </div>
+     
+           <hr>
+     
+           <p class="copyright"> Sustainable Scope 2024 - All Rights Reserved</p>
+     
+         </footer>
+
+       </div>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+       <!--handling product previews -->
+       <script>
+           $(document).ready(function(){
+               $('.product').click(function(){
+                   var name = $(this).data('name');
+                   $('.preview').each(function(){
+                       var target = $(this).data('target');
+                       if(name === target){
+                           $(this).addClass('active');
+                       }
+                   });
+                   $('.products-preview').css('display', 'flex');
+               });
+   
+               $('.fa-times').click(function(){
+                   $('.preview').removeClass('active');
+                   $('.products-preview').css('display', 'none');
+               });
+           });
+       </script>
+   
+       <!-- Ajax request code -->
+       <script>
+           $(document).ready(function(){
+               $.ajax({
+                   type: 'GET',
+                   url: 'products.php', // URL for your data source
+                   success: function(data){
+                       // Handle success, manipulate data as needed
+                       console.log(data);
+                   },
+                   error: function(xhr, status, error){
+                       console.error(error);
+                   }
+               });
+           });
+       </script>
+
+</body>
+</html>

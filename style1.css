@@ -1,0 +1,57 @@
+
+.text{
+  font-family: 'Times New Roman', Times, serif;
+  margin-left:20%;
+  margin-right: 20%;
+}
+
+.text h1{
+  font-size: 30px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.text p{
+  font-size: 22px;
+  line-height: 40px;
+  text-align: left;
+}
+
+.paragraphs{
+  margin-top: 5%;
+}
+
+.fas {
+  float: right;
+  margin-left: 10px;
+  padding-top: 3px;
+}
+
+.back {
+  height: calc(100vh - 80px);
+  background-image: url(About.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.text .event p{
+  color: #1b401f;
+  font-size: 20px;
+  text-align: left;
+  padding-top: 1%;
+  font-size: 22px;
+  line-height: 40px;
+
+}
+.text .event h1{
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.text .event a{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+

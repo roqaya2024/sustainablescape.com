@@ -1,0 +1,167 @@
+
+
+
+<!DOCTYPE html><!--dana-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif; /* Sets the font family for the body text */
+            margin: 0;
+            padding: 0;
+            background-image: url(form2.jpg); /* Sets the background image for the body */
+            background-size: cover; /* Sets the background image to cover the entire view */
+            background-position: center; /* Centers the background image */
+            background-repeat: no-repeat; /* Prevents the background image from repeating */
+            background-attachment: fixed; /* Fixes the background image in place */
+            
+        }
+
+        .container {
+            width: 80%; 
+            max-width: 800px; 
+            margin: 10px auto; /* Centers the container horizontally */
+            padding: 30px; /* Adds padding inside the container */
+            background-color: #fff; /* Sets the background color of the container */
+            border-radius: 15px; /* the edges of the border become rounded */ 
+    
+        }
+
+        h2 {
+            color: #1b401f;
+            font-size: 36px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        label {
+            display: block; /* Displays labels as block elements */
+            margin-bottom: 10px; /* Adds space below each label */
+            font-weight: bold; /* Sets the font weight of labels to bold */
+        }
+
+        .radio-group {
+            margin-bottom: 22px; /* Adds space between each question and their buttons */
+        }
+
+        input[type="radio"] {
+            margin-right: 10px; /* Adds space between buttons themselves */
+        }
+
+        textarea { /* where the user writes their comments */
+            width: 100%;
+            height: 100px; 
+            margin-bottom: 20px; /* Adds space below the textarea */
+            border-radius: 4px; /* Adds rounded corners to the textarea */
+            border: 1px solid #ffffff; /* Sets the border color of the textarea */
+            padding: 10px; 
+            resize: vertical; /* Allows vertical resizing of the textarea */
+        }
+
+        .btn {
+            display: block;
+            width: 100%; 
+            padding: 10px; 
+            background-color: #1b401f; /* Sets the background color of the button */
+            color: white; /* Sets the text color of the button */
+            border: none; /* Removes the border of the button */
+            border-radius: 4px; /* Adds rounded corners to the button */
+            cursor: pointer; /* Changes the cursor to a pointer on hover */
+            font-size: 16px; /* Sets the font size of the button */
+            text-align: center; /* Centers the text inside the button */
+            text-decoration: none; /* Removes underline from the button text */
+            transition: background-color 0.3s ease; /* transition effect to button background color */
+        }
+
+        .btn:hover {
+            background-color:#1b401f; /* Changes the background color of the button when hover */
+        }
+
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="submit"] {
+            width: calc(100% - 20px);
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            background-color: #f2f2f2;
+            font-size: 16px;
+            color: #333;
+            border: 1px solid #ccc;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="email"]:focus,
+        input[type="submit"]:hover {
+            border-color: #1b401f;
+        }
+        input[type="submit"] {
+            background-color: #1b401f;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #1b401f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="S (1).png" alt="Your Logo" style="display: block; margin: 0 auto; width: 300px;">
+
+        <h2>Sign Up</h2>
+        <form  method="POST" action="signup.php">
+            <label for="user">Username</label>
+            <input type="text" id="user" name="user" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="pass">Password</label>
+            <input type="password" id="pass" name="pass" required>
+            <a href="About.html">
+                <input type="submit" value="Sign Up">
+            </a>
+            
+        </form>
+        
+    </div>
+
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+        
+        $('#signupForm').submit(function(event) {
+            event.preventDefault(); 
+            
+            var formData = $(this).serialize();
+            
+            $.ajax({
+                url: 'signup.php', 
+                type: 'POST',
+                data: formData,
+                success: function(response) {
+                    
+                    $('.container').html(response);
+                },
+                error: function(xhr, status, error) {
+                    console.error('AJAX Error:', status, error); 
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

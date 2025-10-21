@@ -1,0 +1,285 @@
+<!DOCTYPE html><!--dana-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylefooter.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>News</title>
+    <!-- CSS Styles -->
+    <style>
+        /* Resetting default margin, padding, and box-sizing */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: .2s linear; /* Adding a transition effect for smoother changes */
+            font-family: "Poppins", sans-serif; /* Setting a default font */
+        }
+        body{
+            background-image: url("form2.jpg"); /* Setting a background image for the body */
+        }
+        /* Styling for the main wrapper */
+        .wrapper{
+            margin: 10px auto;
+            padding: 0 10%; /* Adding horizontal padding */
+            padding-bottom: 10px; /* Adding some padding at the bottom */
+            text-transform: capitalize; /* Capitalizing text */
+        }
+        /* Styling for the heading */
+        h1{
+            color: #fff; /* Setting text color to white */
+            font-size: 45px;
+            text-align: center;
+            padding-bottom: 20px; /* Adding some space at the bottom */
+            text-shadow: 0 15px 10px rgb(0, 0, 0, 0.2); /* Adding a text shadow */
+        }
+        /* Styling for the outer box container */
+        .Outerbox{
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); /* Using CSS grid for layout */
+        }
+        /* Styling for individual news boxes */
+        .box{
+            height: auto; /* Setting height to auto */
+            width:300px; /* Setting a fixed width */
+            padding: 20px; /* Adding some padding */
+            text-align: center; /* Centering text */
+            border-radius: 5px; /* Adding border radius */
+            background: #fff; /* Setting background color to white */
+            box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.2); /* Adding box shadow */
+            overflow: hidden; /* Hiding overflow content */
+        }
+        /* Styling for expanded box */
+        .box.expanded {
+            max-height: none; /* Removing max-height when box is expanded */
+        }
+        /* Styling for images inside the box */
+        .box img{
+            height: 150px; /* Setting image height */
+        }
+        /* Styling for heading inside the box */
+        .box h3{
+            color:#1B401F; /* Setting text color */
+            padding: 10px 0; /* Adding padding */
+            font-size: 20px; /* Setting font size */
+        }
+        /* Styling for paragraphs inside the box */
+        .box p{
+            color:#1B401F; /* Setting text color */
+            font-size: 20px; /* Setting font size */
+            line-height: 1.6; /* Setting line height */
+            max-height: 100px; /* Setting max height for paragraph */
+            overflow:hidden; /* Hiding overflow content */
+        }
+        /* Styling for read more button */
+        .btn{
+            color:#fff; /* Setting text color to white */
+            border:none; /* Removing border */
+            outline:none; /* Removing outline */
+            font-size: 17px; /* Setting font size */
+            margin-top: 10px; /* Adding margin */
+            padding: 8px 15px; /* Adding padding */
+            background: #333; /* Setting background color */
+            border-radius: 5px; /* Adding border radius */
+            display: inline-block; /* Displaying as inline block */
+            text-decoration: none; /* Removing text decoration */
+        }
+        /* Styling for hover effect on button */
+        .btn:hover{
+            letter-spacing: 1px; /* Adding letter spacing */
+        }
+        /* Styling for hover effect on button */
+        .btn:hover{
+            transform: scale(1.03); /* Scaling the button */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Adding box shadow */
+        }
+        /* Media query for smaller screens */
+        @media (max-width:770px){
+            .wrapper{
+                padding:20px; /* Adjusting padding for smaller screens */
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="menu-bar">
+        <img src="Logo.JPG" alt="">
+        <ul>
+              
+            <li><a href="indexn.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="newss.html">News</a></li>
+            
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="Page2 food donation.html">Donate</a>
+            <li><a href="#">Pages <i class="fas fa-caret-down"></i></a>
+            
+                <div class="dropdown-menu">
+                  <ul>
+                    
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <li><a href="Recipes.html">Recipes</a></li>
+                    <li><a href="diys.html">DIYs</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="green-businesses.html">Green Businesses</a></li>
+                  
+                    
+                  </ul>
+                  </div>
+            </li>
+            <li><a href="#"><i style="font-size:24px" class="fa">&#xf007;</i></button>
+                <div class="dropdown-menu">
+                  <ul>
+                    <li><a href="signup.html">Sign up</a></li>
+                    <li><a href="login.html">Log In</a></li>
+
+                    <li><a href="login.html">Log Out</a></li>
+      
+                  </ul>
+                  </div>
+              </li>
+          </ul>
+          
+      </div>
+    <!-- Main wrapper -->
+    <div class="wrapper">
+        <!-- Heading -->
+        <h1>News</h1>
+        <!-- Outer box container for news articles -->
+        <div class="Outerbox"> 
+            <!-- Individual news boxes -->
+            <div class="box">
+                <!-- Image -->
+                <img src="newws1.jpg">
+                <!-- Heading -->
+                <h3>Cities and local policies key to overcome hunger, stresses head of UN agency</h3>
+                <!-- Paragraph -->
+                <p class="recipe">José Graziano da Silva, the Director General of the UN Food and Agriculture Organization (FAO), highlights the critical role of cities in addressing malnutrition through innovative partnerships and actions. He emphasizes the need for collaboration between urban centers and diverse stakeholders to combat food waste and ensure access to nutritious diets for all individuals. Graziano da Silva cites examples of successful initiatives, such as Brazil's Zero Hunger Program, where cities played a pivotal role in providing affordable, nutritious meals and supporting local food production. Additionally, he discusses FAO's support for implementing the Milan Urban Food Policy Pact and emphasizes aligning efforts with the New Urban Agenda for sustainable urban development. Overall, the main idea is the importance of urban involvement and collaboration in addressing malnutrition and promoting food security.
+                </p>
+                <!-- Read more button -->
+                <a href="https://www.un.org/sustainabledevelopment/blog/2017/10/cities-and-local-policies-key-to-overcome-hunger-stresses-head-of-un-agency/#" class="btn">Read more</a>
+            </div>
+            <div class="box">
+                <img src="06-13-wfp-pope-francis.jpg">
+                <h3>Visiting UN food relief agency, Pope Francis shines spotlight on urgent need to end hunger</h3>
+                <p class="recipe">Pope Francis visited the United Nations World Food Programme (WFP) headquarters in Rome, where he expressed his full support for the organization's goal of eradicating hunger. During his visit, he praised the dedication of WFP staff, honored those who lost their lives in service, and emphasized the importance of continuing the fight against hunger. Pope Francis also addressed issues such as food waste, the impact of conflict on food distribution, and the need for increased global cooperation to address hunger effectively. Additionally, the text highlights the significance of the Pope's visit in bringing attention to the urgent need to end hunger and aligning with the Sustainable Development Goals (SDGs), particularly Goal 2: Zero Hunger, by the year 2030.</p>
+                <a href="https://www.un.org/sustainabledevelopment/blog/2016/06/visiting-un-food-relief-agency-pope-francis-shines-spotlight-on-urgent-need-to-end-hunger/#" class="btn">Read more</a>
+
+            </div>
+            <div class="box">
+                <img src="new3.jpg">
+                <h3>WFP boosts efforts to end hunger by 2030 with Indian partnerships</h3>
+                <p class="recipe"> 
+                    United Nations World Food Programme (WFP) is actively collaborating with the Indian Government and the business sector to enhance nutrition and food security in India, the world's second most populous country. This collaboration is seen as a crucial step towards achieving the goal of eradicating global hunger by 2030, as outlined in the 2030 Agenda for Sustainable Development. WFP Executive Director Ertharin Cousin's visit to India involved signing agreements and engaging with government officials and business leaders to establish initiatives such as a Centre of Excellence on Food and Nutrition Security and partnerships to address malnutrition and food insecurity. Additionally, WFP provides support to the Indian government's food-based social safety nets and implements initiatives such as rice fortification to combat anaemia among school children. Overall, the main idea is the concerted effort between WFP, the Indian Government, and the private sector to improve food and nutrition security in India, contributing to the global goal of Zero Hunger by 2030.
+                </p>
+                <a href="https://www.un.org/sustainabledevelopment/blog/2016/01/wfp-boosts-efforts-to-end-hunger-by-2030-with-indian-partnerships/#" class="btn">Read more</a>
+
+            </div>
+            <div class="box">
+                <img src="news5.jpeg">
+                <h3>“Ocean Action for Sustainability – Building a Global Vision to tackle Plastic Pollution”, High-Level UNEP virtual event, Remarks by Ambassador Peter Thomson, UNSG’s Special Envoy for the Ocean.</h3>
+                <p class="recipe">
+                    The world is facing significant environmental challenges, particularly regarding plastic pollution and its impact on nature and human health. The speaker emphasizes the urgent need for collective action to address these issues and make peace with nature before it's too late. They highlight the widespread presence of plastic pollution in oceans and ecosystems, its harmful effects on wildlife and habitats, and the potential health risks posed by microplastics. Additionally, the speaker calls for cooperation with the petrochemical industry to mitigate the plastic crisis and advocates for the adoption of environmentally friendly alternatives. Overall, the main message is a call to action to confront the plastic plague and prioritize environmental sustainability for the well-being of current and future generations.
+                </p>
+                <a href="https://sdgs.un.org/news/ocean-action-sustainability-building-global-vision-tackle-plastic-pollution-high-level-unep" class="btn">Read more</a>
+
+            </div>
+            <div class="box">
+                <img src="news6.jpg">
+                <h3>Our Ocean Conference</h3>
+                <p class="recipe">
+                    European Union organized the 4th edition of the "Our Ocean Conference" in Malta, focusing on various interconnected areas related to ocean sustainability. These areas include climate change, marine protected areas, sustainable fisheries, marine pollution, sustainable blue economy, and maritime security. During the conference, numerous commitments were announced by governments, NGOs, foundations, research institutes, international organizations, and the business community to address these issues. The commitments include financial pledges, the establishment of Marine Protected Areas, and various initiatives aimed at reducing plastic pollution and promoting sustainable practices in the ocean economy. The conference served as a platform for stakeholders to come together, discuss, and make tangible commitments towards preserving the health and vitality of the world's oceans.
+                </p>
+                <a href="https://sdgs.un.org/news/our-ocean-conference-46" class="btn">Read more</a>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function toggleRecipe(btn) {
+            var box = btn.parentNode;
+            var recipe = box.querySelector('.recipe');
+            if (box.classList.contains('expanded')) {
+                box.classList.remove('expanded');
+                recipe.style.maxHeight = "100px"; // Set a default height
+                btn.innerText = "read more";
+            } else {
+                box.classList.add('expanded');
+                recipe.style.maxHeight = recipe.scrollHeight + "px";
+                btn.innerText = "read less";
+            }
+        }
+    </script>
+<div class="foot">
+  <footer>
+     <div class="col-container">
+     <div class="col" id="logooo">
+         <img src="S (3).png" class="logo"> 
+       </div>
+       <div class ="col">
+         <h3>office <div class="underline"></div></h3>
+              
+         <p> Beirut, Lebanon</p>    
+           
+         <p class="email-id"> Sustainable.Scope@outlook.com</p>   
+             
+       </div>    
+       <div class ="col">
+         <h3>Links<div class="underline"></h3>
+         <ul>
+           <li><a href="indexn.html">Home</a></li>
+           <li><a href="About.html">About Us</a></li>
+           <li><a href="Page2 food donation.html">Donate</a></li>
+           <li><a href="feedback.html">Feedback</a></li>
+         </ul>
+       </div>
+       <div class ="col">
+
+         <h3> Newsletter<div class="underline"></div></h3>
+
+         <form method="POST" action="email.php" >
+
+           <i class="emailnews" style="color: #ffffff;"></i>
+
+           <input type="emailnews" placeholder="Enter your email id " required>
+
+           <input type="submit" value="submit">
+
+         </form>
+
+         <div class="social-icons">
+
+           <i class="fa-brands fa-facebook-f"></i>
+
+           <i class="fa-brands fa-twitter"></i>
+
+           <i class="fa-brands fa-whatsapp"></i>
+
+           <i class="fa-brands fa-instagram"></i>
+
+         </div>
+
+       </div>
+     </div>
+
+     </div>
+
+     <hr>
+
+     <p class="copyright"> Sustainable Scope 2024 - All Rights Reserved</p>
+
+   </footer>
+
+ </div>
+</body>
+</html>

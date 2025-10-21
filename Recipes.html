@@ -1,0 +1,444 @@
+
+<!DOCTYPE html><!--Roqaya Ayoub-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero-Waste Recipes</title>
+    <link rel="stylesheet" href="stylefooter.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: .2s linear;
+            font-family: "Poppins", sans-serif;
+        }
+        body{
+            background-image: url("C:\Users\sara\Desktop\web\form2.jpg");
+            background: #1B401F;
+        }
+        .wrapper{
+            margin: 10px auto;
+            padding: 0 10%;
+            padding-bottom: 10px;
+            text-transform: capitalize;
+        }
+        h1{
+            color: #fff;
+            font-size: 45px;
+            text-align: center;
+            padding-bottom: 25px;
+            text-shadow: 0 15px 10px rgb(0, 0, 0, 0.2);
+            padding-top: 20px;
+        }
+        .Outerbox{
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        }
+        .box{
+            height: auto; 
+            width:300px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            background: #fff;
+            box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.2);
+            overflow: hidden; 
+        }
+        .box.expanded {
+            max-height: none;
+        }
+        .box img{
+            height: 150px;
+        }
+        .box h3{
+            color:#1B401F;
+            padding: 10px 0;
+            font-size: 20px; 
+        }
+        .box p{
+            color:#1B401F;
+            font-size: 20px;
+            line-height: 1.6;
+            max-height: 100px;
+            overflow:hidden;   
+        }
+        .btn{
+            color:#fff;
+            border:none;
+            outline:none;
+            font-size: 17px;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #333;
+            border-radius: 5px;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .btn:hover{
+            letter-spacing: 1px;
+        }
+        .btn:hover{
+            transform: scale(1.03);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        }
+        @media (max-width:770px){
+            .wrapper{
+                padding:20px;
+            }
+        }
+
+        *{ 
+            margin: 0;
+            padding: 0;
+        }
+  
+        .menu-bar {
+            background-color: #fff;
+            height: 80px;
+            width: 100%;
+            display: flex;
+            gap:4rem;
+            align-items: center;
+            padding: 1px;
+            position: relative;
+            box-shadow: 2px 2px 4px #00000066; 
+        
+        
+        }
+        .menu-bar ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        .menu-bar ul li {
+            padding: 30px;
+            position: relative;
+        
+        }
+        
+        .menu-bar ul li a {
+            color: #1b401f;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.3s;
+        
+        }
+        
+        .menu-bar ul li a:hover{
+            background: #1b401f;  
+            color:white;
+            border-radius: 10px;
+            padding: 8px 18px;
+        }
+        
+        
+        .dropdown-menu {
+            display: none;
+            background-color: #fff;
+            z-index: 7;
+            box-shadow: 2px 2px 4px #00000066; 
+        }
+        
+        .menu-bar ul li:hover .dropdown-menu {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: #fff;
+        }
+        
+        .menu-bar ul li:hover .dropdown-menu ul {
+            display: block;
+            margin: 10px;
+        }
+        
+        .dropdown-menu ul li:hover .dropdown-menu ul li {
+            width: 150px;
+            padding: 10px;
+            color: #000;
+        }
+        
+        .menu-bar img{
+            height: 80px;
+            margin-left: 5%;
+        }
+        .userOpinion{
+
+            max-width: 70%;
+            margin-left: 15%;
+        h2 {
+            text-align: center;
+           color: #ecf0ed;
+;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: none;
+        }
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            background-color: #061f09;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #156b31;
+        }
+    }
+    </style>
+
+        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+<script>
+    $(document).ready(function() {
+        $('#searchInput').on('input', function() {
+            var searchText = $(this).val().toLowerCase();
+            $('.box').each(function() {
+                var recipeTitle = $(this).find('h3').text().toLowerCase();
+                if (recipeTitle.includes(searchText)) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        });
+    });
+</script>
+
+</head>
+<body>
+    <div class="menu-bar">
+        <img src="Logo.JPG" alt="">
+        <ul>
+              
+            <li><a href="indexn.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="newss.html">News</a></li>
+            <li><a href="login.html">Login</a>
+              <div class="dropdown-menu">
+                <ul>
+                  <li><a href="signup.html">Sign up</a></li>
+                </ul>
+                </div>
+            </li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="Page2 food donation.html">Donate</a>
+            <li><a href="#">Pages <i class="fas fa-caret-down"></i></a>
+            
+                <div class="dropdown-menu">
+                  <ul>
+                    
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <li><a href="Recipes.html">Recipes</a></li>
+                    <li><a href="diys.html">DIYs</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="green-businesses.html">Green Businesses</a></li>
+                  
+                    
+                  </ul>
+                  </div>
+            </li>
+            
+          </ul>
+      </div>
+
+
+    <div class="wrapper">
+        <h1>Zero-Waste Recipes</h1>
+
+        <input type="text" id="searchInput" placeholder="Search for recipes...">
+         
+        <div class="Outerbox"> 
+            <div class="box">
+                <img src="image1.jpg">
+                <h3>Vegetable Scrap Broth:</h3>
+                <p class="recipe">Collect vegetable scraps like onion ends, carrot peels, celery leaves, etc.
+                    Simmer the scraps in water with herbs and spices to make a flavorful broth.
+                    Use the broth as a base for soups, stews, or sauces.
+                </p>
+                <a href="#" class="btn" onclick="toggleRecipe(this)">read more</a>
+            </div>
+            <div class="box">
+                <img src="image2.jpg">
+                <h3>Stale Bread Croutons:</h3>
+                <p class="recipe">Cube Stale Bread And Toss With Olive Oil, Garlic, And Herbs. 
+                    Bake Until Crispy To Make Homemade Croutons For Salads Or Soups.</p>
+                <a href="#" class="btn" onclick="toggleRecipe(this)">read more</a>
+            </div>
+            <div class="box">
+                <img src="image3.jpg">
+                <h3>Root-To-Leaf Vegetable Stir-Fry:</h3>
+                <p class="recipe"> 
+                    Use The Entire Vegetable, Including Stems And Leaves, In Stir-Fries Or Sautés. 
+                    Broccoli Stems, Beet Greens, And Carrot Tops Are All Delicious And Nutritious.
+                </p>
+                <a href="#" class="btn" onclick="toggleRecipe(this)">read more</a>
+            </div>
+            <div class="box">
+                <img src="image4.jpg">
+                <h3>Smoothies And Juices:</h3>
+                <p class="recipe">
+                    Blend Overripe Fruits And Vegetables Into Smoothies Or Juices. They're Perfect For Hiding Less-Than-Perfect Produce While Still Getting All The Nutrients.
+                </p>
+                <a href="#" class="btn" onclick="toggleRecipe(this)">read more</a>
+            </div>
+            <div class="box">
+                <img src="image5.jpg">
+                <h3>Fruit Compote:</h3>
+                <p class="recipe">
+                    Cook Overripe Fruits With A Bit Of Sugar And Water To Make A Fruit Compote. Use It As A Topping For Yogurt, Oatmeal, Pancakes, Or Desserts.
+                </p>
+                <a href="#" class="btn" onclick="toggleRecipe(this)">read more</a>
+            </div>
+            <div class="box">
+                <img src="image6.jpeg">
+                <h3>Stale Bread Pudding:</h3>
+                <p class="recipe">
+                    Combine Stale Bread With Eggs, Milk, Sugar, And Spices To Make Bread Pudding. Bake Until Set For A Delicious Dessert Or Breakfast Option.
+                </p>
+                <a href="#" class="btn" onclick="toggleRecipe(this)">read more</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleRecipe(btn) {
+            var box = btn.parentNode;
+            var recipe = box.querySelector('.recipe');
+            if (box.classList.contains('expanded')) {
+                box.classList.remove('expanded');
+                recipe.style.maxHeight = "100px"; 
+                btn.innerText = "read more";
+            } else {
+                box.classList.add('expanded');
+                recipe.style.maxHeight = recipe.scrollHeight + "px";
+                btn.innerText = "read less";
+            }
+        }
+
+        window.onload = function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === '1') {
+            showToast("Image uploaded successfully!");
+        }
+    };
+
+    function showToast(message) {
+        const toast = document.createElement("div");
+        toast.textContent = message;
+        toast.style.position = "fixed";
+        toast.style.bottom = "20px";
+        toast.style.right = "20px";
+        toast.style.background = "#28a745";
+        toast.style.color = "white";
+        toast.style.padding = "12px 20px";
+        toast.style.borderRadius = "8px";
+        toast.style.boxShadow = "0 2px 10px rgba(0,0,0,0.2)";
+        toast.style.zIndex = "1000";
+        toast.style.fontSize = "16px";
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+            toast.remove();
+        }, 3000);
+    }
+    </script>
+      <div class="userOpinion">
+        <h2>Leave a Recipe and Upload a Picture</h2>
+    <form action="recipes.php" method="post" enctype="multipart/form-data">
+        <label for="comment">Comment:</label><br>
+        <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+        
+        <label for="picture">Upload Picture:</label><br>
+        <input type="file" id="picture" name="picture"><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+    <div class="foot">
+        <footer>
+           <div class="col-container">
+           <div class="col" id="logooo">
+               <img src="S (3).png" class="logo"> 
+             </div>
+             <div class ="col">
+               <h3>office <div class="underline"></div></h3>
+                    
+               <p> Beirut, Lebanon</p>    
+                 
+               <p class="email-id"> Sustainable.Scope@outlook.com</p>   
+                   
+             </div>    
+             <div class ="col">
+               <h3>Links<div class="underline"></h3>
+               <ul>
+                 <li><a href="indexn.html">Home</a></li>
+                 <li><a href="About.html">About Us</a></li>
+                 <li><a href="Page2 food donation.html">Donate</a></li>
+                 <li><a href="feedback.html">Feedback</a></li>
+               </ul>
+             </div>
+             <div class ="col">
+     
+               <h3> Newsletter<div class="underline"></div></h3>
+     
+               <form method="POST" action="email.php" >
+     
+                 <i class="emailnews" style="color: #ffffff;"></i>
+     
+                 <input type="emailnews" placeholder="Enter your email id " required>
+     
+                 <input type="submit" value="submit">
+     
+               </form>
+     
+               <div class="social-icons">
+     
+                 <i class="fa-brands fa-facebook-f"></i>
+     
+                 <i class="fa-brands fa-twitter"></i>
+     
+                 <i class="fa-brands fa-whatsapp"></i>
+     
+                 <i class="fa-brands fa-instagram"></i>
+     
+               </div>
+     
+             </div>
+           </div>
+     
+           </div>
+     
+           <hr>
+     
+           <p class="copyright"> Sustainable Scope 2024 - All Rights Reserved</p>
+     
+         </footer>
+
+       </div>
+</body>
+</html>

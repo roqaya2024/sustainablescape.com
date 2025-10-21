@@ -1,0 +1,340 @@
+
+<!DOCTYPE html><!--Roqaya Ayoub-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY Projects</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-bar {
+    background-color: #fff;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    padding: 1px;
+    position: fixed; /* Fix the menu bar position */
+    top: 0; /* Position it at the top of the viewport */
+    z-index: 1000; /* Ensure it's above other content */
+    box-shadow: 2px 2px 4px #00000066; 
+}
+  .menu-bar ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .menu-bar ul li {
+    padding: 30px;
+    position: relative;
+  
+  }
+  
+  .menu-bar ul li a {
+    color: #1b401f;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s;
+   
+  }
+  
+  .menu-bar ul li a:hover{
+    background: #1b401f;  
+    color:white;
+    border-radius: 10px;
+    padding: 8px 18px;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    background-color: #fff;
+    z-index: 7;
+    box-shadow: 2px 2px 4px #00000066;
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #fff;
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+  }
+  
+  .dropdown-menu ul li:hover .dropdown-menu ul li {
+    width: 150px;
+    padding: 10px;
+    color: #000;
+  }
+  
+  .menu-bar img{
+    height: 80px;
+    margin-left: 5%;
+  }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("background3.PNG");
+            background-size: cover; 
+            background-position: center; 
+            margin: 0;
+            padding-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            width: 100%;
+            padding: 200px 20px 20px; 
+            box-sizing: border-box; 
+            max-width: 900px;
+            width: 100%;
+            padding-top: 200px;
+            padding: 20px;
+        }
+        
+        .project {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .project:hover {
+            transform: translateY(-5px);
+        }
+        
+        h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        
+        button {
+            background-color:#1A401F;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #516a55;
+        }
+        
+        .instructions {
+            display: none;
+            margin-top: 10px;
+            color: #3e3e3e;
+        }
+        
+        p {
+            margin: 5px 0;
+        }
+        
+        .userOpinion{
+            h2 {
+            text-align: center;
+            color: #ecf0ed;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: none;
+        }
+        input[type="file"] {
+            margin-bottom: 20px;
+            width: 200px;
+            
+        }
+        input[type="submit"] {
+            background-color: #1a401f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #156b31;
+        }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="menu-bar">
+        <img src="Logo.JPG" alt="">
+        <ul>
+              
+            <li><a href="indexn.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="newss.html">News</a></li>
+            <li><a href="login.html">Login</a>
+              <div class="dropdown-menu">
+                <ul>
+                  <li><a href="signup.html">Sign up</a></li>
+                </ul>
+                </div>
+            </li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="Page2 food donation.html">Donate</a>
+            <li><a href="#">Pages <i class="fas fa-caret-down"></i></a>
+            
+                <div class="dropdown-menu">
+                  <ul>
+                    
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <li><a href="Recipes.html">Recipes</a></li>
+                    <li><a href="diys.html">DIYs</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="green-businesses.html">Green Businesses</a></li>
+                  
+                    
+                  </ul>
+                  </div>
+            </li>
+            
+          </ul>
+      </div>
+    <div class="container">
+        <div class="project">
+            <h2>Plastic Bottle Planters</h2>
+            <button onclick="toggleInstructions(this)">Show Instructions</button>
+            <div class="instructions">
+                <p>1. Cut the top off the plastic bottle.</p>
+                <p>2. Poke holes in the bottom for drainage.</p>
+                <p>3. Fill with soil and plant your desired greenery.</p>
+                <p>4. Hang or place in a sunny spot.</p>
+            </div>
+        </div>
+        <div class="projects">
+        
+            <div class="project">
+                <h2>Plastic Bag Jump Rope</h2>
+                <button onclick="toggleInstructions(this)">Show Instructions</button>
+                <div class="instructions">
+                    <p>1. Cut plastic bags into long strips.</p>
+                    <p>2. Tie them together to make a jump rope.</p>
+                    <p>3. Braid the strips for added durability.</p>
+                </div>
+            </div>
+        
+            
+            <div class="project">
+                <h2>Plastic Bottle Bird Feeder</h2>
+                <button onclick="toggleInstructions(this)">Show Instructions</button>
+                <div class="instructions">
+                    <p>1. Cut windows or openings in a plastic bottle large enough for birds to access.</p>
+                    <p>2. Fill the bottle with birdseed and hang it outside.</p>
+                    <p>3. This DIY provides food for birds while repurposing plastic bottles.</p>
+                </div>
+            </div>
+        
+            
+            <div class="project">
+                <h2>Plastic Lid Coasters</h2>
+                <button onclick="toggleInstructions(this)">Show Instructions</button>
+                <div class="instructions">
+                    <p>1. Collect plastic lids from containers like yogurt or milk jugs.</p>
+                    <p>2. Arrange them in a pattern and glue them together to create coasters.</p>
+                    <p>3. Seal the surface with clear varnish or Mod Podge for durability.</p>
+                </div>
+            </div>
+        
+           
+            <div class="project">
+                <h2>Plastic Spoon Mirror Frame</h2>
+                <button onclick="toggleInstructions(this)">Show Instructions</button>
+                <div class="instructions">
+                    <p>1. Gather plastic spoons and cut off the handles.</p>
+                    <p>2. Glue the spoon heads in overlapping layers around the edge of a mirror or picture frame.</p>
+                    <p>3. Paint the spoons in a uniform color for a stylish and unique frame.</p>
+                </div>
+            </div>
+        
+            
+            <div class="project">
+                <h2>Plastic Bottle Sprinkler</h2>
+                <button onclick="toggleInstructions(this)">Show Instructions</button>
+                <div class="instructions">
+                    <p>1. Poke holes in a plastic bottle using a hot nail or drill.</p>
+                    <p>2. Attach a hose connector to the bottle opening.</p>
+                    <p>3. Connect it to a garden hose and use it as a DIY sprinkler for watering plants.</p>
+                </div>
+            </div>
+        
+           
+            <div class="project">
+                <h2>Plastic Straw Bracelets</h2>
+                <button onclick="toggleInstructions(this)">Show Instructions</button>
+                <div class="instructions">
+                    <p>1. Cut plastic straws into small pieces.</p>
+                    <p>2. String them onto elastic cord or thread to make colorful bracelets or necklaces.</p>
+                    <p>3. It's a fun craft project for kids and a creative way to reuse straws.</p>
+                </div>
+            </div>
+        
+            
+            <div class="project">
+                <h2>Plastic Bag Crochet or Knitting</h2>
+                <button onclick="toggleInstructions(this)">Show Instructions</button>
+                <div class="instructions">
+                    <p>1. Cut plastic bags into strips and tie them together to make "plarn" (plastic yarn).</p>
+                    <p>2. Use plarn for crocheting or knitting projects like bags, mats, or even hats.</p>
+                    <p>3. It's a sustainable way to repurpose plastic bags into functional items.</p>
+                </div>
+            </div>
+        </div>
+        <div class="userOpinion">
+            <h2>Leave a Comment and Upload a Picture</h2>
+        <form method="POST" action="diys.php"  enctype="multipart/form-data">
+            <label for="comment">Comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+            
+            <label for="picture_path">Upload Picture:</label><br>
+            <input type="file" id="picture_path" name="picture_path"><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+    </div>
+   
+
+    <script>
+        function toggleInstructions(button) {
+            const instructions = button.nextElementSibling;
+            instructions.style.display = instructions.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

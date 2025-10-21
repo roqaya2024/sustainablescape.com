@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+.foot{
+    width: 100%;
+    height: 400px;
+    margin-top: 5%;
+    background-image:url(form2.jpg) ;
+    border-top-left-radius:125px;
+}
+footer{
+
+    
+    bottom:0;
+    
+    color:#fff;
+    
+    
+    font-size: 13px;
+    line-height: 20px;  
+}
+.row{
+    width: 10%;
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 300px;
+    height: 300px;
+    margin-left: 0;
+    margin-bottom: 30px;
+}
+.col h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position:relative
+}
+
+.foot ul li{
+    list-style: none;
+    margin-bottom: 12px;
+
+}
+.foot ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.foot form{
+    padding-bottom: 15px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+.foot  form .far{
+    font-size: 18px;
+    margin-right: 10px;
+}
+.foot form input{
+    width: 100px;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+
+}
+.foot form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+.foot form button .far{
+    font-size: 16px;
+    color: #ccc;
+}
+.social-icons .fab{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #082200;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer ;
+}
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+.copyright{
+    text-align: center;
+}
+.underline{
+    width: 100%;
+    height: 1px;
+    background: #ffffff;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+
+.col-container{
+    max-width: 85%;
+    margin-left: 7.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.col{
+    width: 30%;
+    margin-top: 10%;
+}
+#logooo{
+    margin-top:5%;
+}
